@@ -1,0 +1,5 @@
+print('Calculadora de media')
+port = float(input('Digite o valor da nota de portugues: '))
+ingl = float(input('Digite o valor da note de ingles: '))
+matem = float(input('Digite o valor da note de matematica: '))
+print('Media final: ', ((port+ingl+matem)/3))
