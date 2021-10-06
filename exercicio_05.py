@@ -40,15 +40,49 @@ else:
         # o valor do aumento;
         # o novo salário, após o aumento.
 salario=float(input('Digite o valor do salario: '))
+valorAumento=0
+novoSalario=0
+percAumento=0
+# imprime='Salario atual: R$%.2f'%salario,'\nPercentual de aumento: ',percAumento,'\nValor do aumento: R$%.2f'%valorAumento,'\nNovo salario: R$%.2f'%novoSalario
 if(salario<=280.00):
-    salario=salario+(salario*(20/100))
-    print('Salario:', salario)
-elif(salario>280.00) and (salario<=700.00):
-    salario=salario+(salario*(15/100))
-    print('Salario:', salario)
-elif(salario>700.00) and (salario<=1500.00):
-    salario=salario+(salario*(10/100))
-    print('Salario:', salario)
-elif(salario>1500.00):
-    salario=salario+(salario*(5/100))
-    print('Salario:', salario)
+    percAumento='20%'
+    valorAumento=(salario*(20/100))
+    novoSalario=(salario+valorAumento)
+    print('Salario atual: R$%.2f'%salario,'\nPercentual de aumento: ',percAumento,'\nValor do aumento: R$%.2f'%valorAumento,'\nNovo salario: R$%.2f'%novoSalario)
+elif(salario<=700.00):
+    percAumento='15%'
+    valorAumento=(salario*(15/100))
+    novoSalario=(salario+valorAumento)
+    print('Salario atual: R$%.2f'%salario,'\nPercentual de aumento: ',percAumento,'\nValor do aumento: R$%.2f'%valorAumento,'\nNovo salario: R$%.2f'%novoSalario)
+elif(salario<=1500.00):
+    percAumento='10%'
+    valorAumento=(salario*(10/100))
+    novoSalario=(salario+valorAumento)
+    print('Salario atual: R$%.2f'%salario,'\nPercentual de aumento: ',percAumento,'\nValor do aumento: R$%.2f'%valorAumento,'\nNovo salario: R$%.2f'%novoSalario)
+else:
+    percAumento='5%'
+    valorAumento=(salario*(5/100))
+    novoSalario=(salario+valorAumento)
+    print('Salario atual: R$%.2f'%salario,'\nPercentual de aumento: ',percAumento,'\nValor do aumento: R$%.2f'%valorAumento,'\nNovo salario: R$%.2f'%novoSalario)
+
+
+### FORMA MAIS CONVECIONAL PARA O EXERCICIO ACIMA
+# CRIE AS VARIAVEIS: SALARIO, PERCENTUAL, AUMENTO E NOVOSALARIO
+salario=float(input('Digite o valor do salario: '))
+#verifique a condição
+if(salario<=280.00):
+    percentual=20
+elif(salario<=700):
+    percentual=15
+elif(salario<=1500):
+    percentual=10
+else:
+    percentual=5
+print('Salario anterior: ', salario)
+print('Percentual: ', percentual,'%')
+# efetue os calculos
+percentual=(percentual/100)
+aumento=percentual*salario
+novoSalario=aumento+salario
+print('Aumento: R$%.2f'%aumento)
+print('Novo salario: R$%.2f'%novoSalario)
