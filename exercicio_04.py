@@ -52,6 +52,6 @@ if(num3>num2):
     aux=num3
     num3=num2
     num2=aux
+    print('O maior é: ', num1, 'o do meio é: ',num2, 'o menor é: ',num3)
 else:
     print('Todos iguais')
-print('O maior é: ', num1, 'o do meio é: ',num2, 'o menor é: ',num3)
