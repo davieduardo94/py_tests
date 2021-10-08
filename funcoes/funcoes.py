@@ -34,3 +34,5 @@ elif(operacao=='/'):
     divisao(num1,num2)
 elif(operacao=='*'):
     multiplicacao(num1,num2)
+else:
+    print('Opção invalida!')
