@@ -37,7 +37,8 @@
 		"prefix": "pyfunction",
 		"body": [
 			"def ${1:defName}(${2:params}):",
-		    "${3:code}"
+		    "${3:  code}",
+			"${4:  return}"
 		],
 		"description": "Make a function"
 	}
