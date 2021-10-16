@@ -9,9 +9,8 @@ def renameFile():
 #   validando se esta vazio
 	if(dataDir==[]):
 		print('Pasta vazia')
-	else:
+	else:	
 		print('Arquivos na pasta: ', dataDir)
 #     aqui ira renomear o arquivo na pasta para novo nome
-#  PROBLEMA: se houver mais de 1 arquivo ocorrerá Exception
 		for fileInFolder in dataDir:
 			print(os.rename(fileIn+fileInFolder, fileIn+newFile))
