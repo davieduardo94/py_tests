@@ -1,23 +1,13 @@
 import zipfile
 
-# caminho onde vai salvar para presencial
-sourcePres = 'C:\Temp\Pres\\'
-# caminho onde vai salvar para ead
-sourceEAD = 'C:\Temp\EAD\\'
-# pasta onde será baixado o arquivo csv
-downFile = 'C:\Temp\CSV\\'
 # nome dos arquivos
-fileEAD = 'EAD.zip'
-filePres = 'Pres.zip'
-
-def extractFile(account):
-	if(account==215):
-		fileName = filePres
-		fileIn = sourcePres
-	else:
-		fileName = fileEAD
-		fileIn = sourceEAD
+fileName = 'nome_do_arquivo.zip'
+# local onde está o arquivo
+fileIn = 'C:\Temp\CSV\\'
+def extractFile():
 	print('Extraindo arquivo')
 	Zip_ref = zipfile.ZipFile(fileIn+fileName, 'r')
+# 	extraindo arquivo para pasta
 	Zip_ref.extractall(fileIn)
+# 	finalçizando o zipFile
 	Zip_ref.close()
