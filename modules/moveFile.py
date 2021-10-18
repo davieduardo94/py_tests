@@ -1,3 +1,6 @@
+import shutil
+import os
+
 # caminho onde vai salvar para presencial
 sourcePres = 'C:\Temp\Pres\\'
 # caminho onde vai salvar para ead
