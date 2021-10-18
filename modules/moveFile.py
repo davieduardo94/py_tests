@@ -1,23 +1,14 @@
 import shutil
 import os
 
-# caminho onde vai salvar para presencial
-sourcePres = 'C:\Temp\Pres\\'
-# caminho onde vai salvar para ead
-sourceEAD = 'C:\Temp\EAD\\'
+# caminho onde vai salvar os arquivos
+destination = 'C:\Temp\\'
 # pasta onde será baixado o arquivo csv
-downFile = 'C:\Temp\CSV\\'
-# nome dos arquivos
-fileEAD = 'EAD.zip'
-filePres = 'Pres.zip'
+downloadFile = 'C:\Temp\CSV\\'
 
 def moveFile(account):
 	print('Movendo arquivo para pasta selecionada')
-	if(account==215):
-		destination = sourcePres
-	else:
-		destination = sourceEAD
-	fileIn = downFile
-	dataDir = os.listdir(fileIn)	
+# 	listando arquivos no diretorio
+	dataDir = os.listdir(downloadFile)	
 	for fileInFolder in dataDir:
-			shutil.move(fileIn+fileInFolder,destination)
+		shutil.move(downloadFile+fileInFolder,destination)
